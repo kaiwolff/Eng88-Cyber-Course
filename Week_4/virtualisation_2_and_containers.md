@@ -1,4 +1,4 @@
-# Virtualisation - Further Notes
+## Virtualisation - Part 2
 
 In part one, we looked at virtualisation that took the same structure as a computer, but made it portable. We used  a hypervisor, a virtualised version of the hardware that allows the software to run. Effectively, we were mimicking the hardware as a software. The result is having a machine running on 'pretend' hardware. The disadvantage of this is slower performance as the system is having to expend more effort to emulate the hardware, and some of the host system's capacity is reserved by the virtual machines.
 

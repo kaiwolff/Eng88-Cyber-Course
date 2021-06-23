@@ -1,7 +1,5 @@
 AWS Notes
 
-It is tricky sometimes. Setup is taking a while. User groups appear to be the issue.
-
 
 
 
