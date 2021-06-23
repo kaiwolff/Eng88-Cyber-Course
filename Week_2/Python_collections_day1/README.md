@@ -8,7 +8,7 @@
 
 ### What are Data Collections
 
-- Data Collections are used to collect data, oddly enough
+- Data Collections are used to collect data
 - CRUD principle: Create, read, update, delete
 - Exceptions are tuples, which are immutable
 

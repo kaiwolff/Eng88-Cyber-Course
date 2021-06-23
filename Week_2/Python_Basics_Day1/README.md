@@ -1,10 +1,5 @@
-#Python
-## Python installation 3.7 or above
-### Pycharm set up
-#### Documentation with README.md to store on Github
-
-- Testing the python environment `print("Hello World")`
-  
+# Python
+ 
 ### Why Python ?
 
 - Very Widely used
@@ -24,9 +19,9 @@ If we do not understand the code (not necessarily at the dev level), how could w
 
 Knowing at least one OOP language is vital, this can be taken across to other languages and apply security measures.
 
-##Running Notes - Lesson on variables
+## Running Notes - Lesson on variables
 
--Variables work as a placeholder to store data.
+- Variables work as a placeholder to store data.
 - Main types are strings, Booleans, Numbers (integers and floats)
 - "Quotation Marks designate strings"
 - boolean holds True or False
@@ -56,10 +51,9 @@ print(type(salary))
 name = input("\n Please enter your name: ")
 
 print("Hello " + name)
-
-# Activity
-#Have a 15 minute break
-## write code that has functionality:
-## Create a variable for first name, last name and Date of Birth.
-##Display these details, combined with a greeting message
 ```
+
+#### Activity - Found in activity_one.py
+Write code that has the following functionality:
+- Create a variable for first name, last name and Date of Birth.
+- Display these details, combined with a greeting message

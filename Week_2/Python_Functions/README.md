@@ -1,10 +1,10 @@
-# Functions
+## Functions
 
 Blocks of code that do something you may want to call on again. Generally functions should do one thing, and do it well.
 
 Important part of **DRY** principle ```DON'T REPEAT YOURSELF```. If you can put something into a function and re-use it, you absolutely should.
 
-##Code-Along (first three portions)
+## Code-Along with annotations
 
 ```#create a basic function
 #syntax is def name():
@@ -32,7 +32,7 @@ def greeting_user():
 print(greeting_user())
 ```
 
-### Working on functions that take arguments
+### Taking arguments into a function
 
 ```#creatign a function that takes two arguments as integers
 

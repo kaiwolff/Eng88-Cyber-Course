@@ -54,8 +54,7 @@ else:
 
 ### Waiter_Helper
 
-This task and the associated readme were completed in a dedicated git repository.
-
+This task and the associated readme were completed in a dedicated git repository. It is in Week_3/waiter_helper.
 ### movie_ratings
 
 This work is similar to a few previously done exercises, except neatened up to encapsulate the code in a class called Rating_Explainer. By default, this will now have a dictionary of the ratings as keys and their associated explanation as a value.
@@ -99,4 +98,8 @@ With this functionw written, all that remains is to create a Rating_Explainer ob
 explainer = Rating_Explainer()
 explainer.explain_rating()
 ```
+
+A full version of waiter_helper and some other code samples are available in /Week3/Python_Exercises_Week3, if needed.
+
+
 

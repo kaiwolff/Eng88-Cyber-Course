@@ -90,3 +90,5 @@ print(my_calc.divide(4,2))
 print(my_calc.inchtocm(2))
 print(my_calc.triangle_area(2,2))
 ```
+
+For some examples employing these concepts, please see Week_2/Week2_Code_Exercises
