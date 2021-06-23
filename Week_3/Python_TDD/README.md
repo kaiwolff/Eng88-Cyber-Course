@@ -1,4 +1,9 @@
-# TDD Exercise
+## Test-Driven Development
+
+Test-Driven Development is an approach where tests are written first, and then the simplest code to pass the tests is written, in order to quickly produce a prgram conforming to a set of customer requirements. The code is then refactored and more tests are written if necessary, starting the cycle again.
+
+
+### TDD Exercise
 
 Trying out a TDD approach to writing a calculator
 
