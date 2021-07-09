@@ -87,7 +87,7 @@ Key Aim of DevOps is to get the working product into the hands of customers as q
 - Continuous deployment
 - Continuous Monitoring
 
-Notice that all parts are continuos throughout the.
+Notice that all parts are continuous throughout the product's lifetime.
 
 Testing - Once the initial code has been created, it will be continuously tested for bugs, either while unchanged and certainyl more rigorously before any new features are accepted. Can use automation for this e.g. Selenium.
 

@@ -1,6 +1,286 @@
-# Week 5 - Networking 2
+# Week 5 Networking
 
-Recap - A network is several devices that are connected to each other. The main purpose is to exchange data. When we say that we have a network, we have networked components. These can be categorised in several ways:
+Week 5 - Networking 2: Electric Boogaloo
+
+A network is several devices that are connected to each other. The main purpose is to exchange data.
+
+When we say that we have a network, we have networked components. These can be categorised in several ways.
+
+
+The Host
+
+The main network component is the host. The host is the central point of the network. All computers that are connected to the network and participate directly in network communications are classified as a host.The term host refers to devices that are assigned an address for communication purposes.The other term for host is “end device”.
+
+Server
+
+Computer or software that provides a service to other end devices on the network. “A host that provides a service”
+
+Client
+A host that requests a service.
+
+
+Architecture types
+
+This is collectively termed server-client architecture. In this, the server cannot ask the client for a service.
+
+
+Other option is peer-to-peer architecture. In a peer-to-peer network, hosts can work as both a client and a server. Examples of this might be device sharing, file sharing, etc. See below:
+
+
+
+
+
+To connect the host and client, we use intermediary device. The purpose of intermediary devices is to connect other devices on t he network. Types include:
+
+
+
+Their primary purpose is to connect devices or to provide a function for these end devices to be connected.
+
+
+Network Media;
+
+The medium that we use to interconnect the devices. Network media include:
+
+Metal Wires (aka cabling)
+Fibres
+Wireless
+
+Network Type
+Canc ategorise network based on:
+
+Size of area covered
+Number of connected users.
+Types of Services
+Area of Responsibility
+
+
+Network Infrastructure
+
+LAN: Local Area Network
+WAN Wide Area Network
+
+Lan is for small geographical area. Eg A house, an office, a building…
+
+WAN is designed to provide access to other networks over wide geographical area. Generally managed by larger corporation or a telecom provider. The Internet is a collection of WANs. WANS usually used to connect several LANs together.
+
+
+
+
+
+Also have MAN: Metropolitan Area Network. This term exists but is not widely used. Can generally be considered as a WAN. WAN is more generic and more ocmmonly used.
+
+The Internet is a collection fo interconnected networks
+
+
+
+Intranet; a private connection of LANs or WANs, usually belonging to an organisation (or group). Classic examples are company-internal networks.
+
+Extranet: Another concept, not particularly well defined so will avoid talking about this.
+
+Designed to provide secure access to people between two different organisations. Closed, private, but not as simple as an intranet. Example would be the NHS. Government agency, but needs to communicate between different trusts that may not be on the NHS intranet.
+
+
+
+Area of Responsibility. In LAN, the network is managed on a smaller scale (e.g. the homeowner). When connected to a WAN, you are responsible for your LAN, but not the WAN itself. WAN responsibility is the provider’s (e.g. BT)
+
+
+3 Elements of Communication
+
+
+Source, Destination, Channel
+
+Goal of communication is to transmit a message (from source to destination)
+
+
+Message Delivery options
+
+As Unicast
+Multicast
+Broadcast
+
+Choice depends on number of users, and whether the message is meant to be targeted or not.
+
+Unicast targets only one destination. Multicast targets a set of destinations. A broadcast is available to all destinations.
+
+
+Protocols
+
+Protocol Suite - ISO Suite
+
+Protocol suite, or standard, are a group of protocols required for communication. For example, we have a protocol to manage the network media, or a protocol to show that a message has been delivered to the destination.
+
+ISO
+
+TCP
+
+
+
+63+25.
+
+ISO is a family of protocols, developed by International Standardisation Organisation in 1977. The ISO suit, is open 
+
+OSI - Open Systems Interconnections
+
+When developing a physical object, you also need to take care of the protocol for the Data Link portion
+
+#### Physical - Network media
+The physical level is stuff like the frequency used for wireless, what is sent down which channel in cables..
+
+
+#### Data Link - Physical Addressing, Data Exchange over common media
+The data link is about how to send and receive the data.Describes the means for exchanging the data over the medium. How the two shots should communicate directly. Data link provides the functionality to isolate the physical layer from the network layers and above.
+
+#### Network Layer  - Addressing, Routing, Data Exchange across Networks
+Provides service to allow end devices to exchange data across networks. While Data Link only takes care of hosts on the same network with common media. The network layer tackles communication across larger networks or one across several devices. Network addressing is more general than data link.
+
+The network layer provides addressing to be used for cross-network communication. The classic example is the IP address. The key function is to give an address for each end device on the network. It will also give us routing.
+
+In order to know which route we should take when several networks are connected, the network layer solves this. This and addressing are the main two thin562.s provided by the network layer.
+
+#### Transport
+
+TCP - Transmission Control Protocol. 
+UDP - User Datagram Protocol
+
+TCP make sure all the data sent is received by the receiver.  UDP does not have this guarantee. This means that some data will be delivered, but if data has not been delivered, it does not matter to UDP.
+
+
+TCP use case - email. All data needs to be delivered correctly to the receiver side.
+
+Use case for UDP is continuous communication, where a continuous delivery of data , a classic would be livestreams. Maybe a quick wobble ina  picture, but the continuous transmission is more important and it would actually be harmful to try and enforce complete transmission of data. Cases where it is more important to continuously broadcast over sending everything perfectly.
+
+#### Session
+
+Communication between hosts
+
+#### Presentation
+
+Data representation, and excryption.
+
+#### Application Layer
+
+Data accesses by applications/users here, e.g. HTTP, Telnet
+
+
+TCP/IP Layers
+
+
+
+
+We have:
+
+Network Access Layer - control hardware and media that make up the network. Here we specify what the best path through the network is and give IP addresses
+Internet Layer - part of network layer in OSI. Similar purpose
+Transport Layer - aforementioned TCP or UDP - Defines whether connection-oriented 
+Application Layer - includes all the protocols such as HTTP - represent data, encoding and application protocol
+
+
+
+OSI and TCP/IP model
+
+
+
+OSI Model provides more abstracted description, but the concrete protocols stem from teh the TCP/IP protocol Suite.
+
+How do the protocols work together?
+
+
+
+This is called encapsulation. Each service adds its own data, which are called headers in the above diagram.
+
+De-Encapsulation is the reverse of this. Each layer there takes away the data that was added by a different layer.
+
+
+ TCP vs UDP
+
+
+
+Both rely on IP, but the protocols that follow on are different. As can be seen from the options, IP focus on one-to-one connection where fidelity matters, while UDP is more tolerant of some data loss during transmission, while delays matter more to UDP than to TCP, where delays are comparably acceptable.
+
+Port Numbers
+
+When an application or process is attempting to work with a computer, they would normally listen to a port number. It is only possible for one app or process to listen to a port number at hte same time. The port numbers are thus used to manage multiple simultaneous ‘conversations’. 
+
+IP sends to either TCP or UDP, then check destination port number and pass it to the next protocol or application. Notice that the source port and destination port are different.
+
+
+SERVERS
+
+In order to provide the service, the server needs just one port. The source port is different, but the destination port is just one..
+
+
+
+Port numbers are a 16 bit integer, so range from 0 to 65535. IANA (Internat-Assigned Number Authority) will fix szome of these ports to certain services
+
+0-1023: Well-known ports. Reserved for popular services, e.g. browsers
+1024-49151 - Registered ports. These processes are primarily for applications that a user might commonly install.
+49152-65535 - Private or Dynamic ports. For use and re-use by applications. Often used temporarily, whereas the previous numbers might more consistently use the same number.
+
+Some more famous ports:
+
+TCP 20: used by FTP (File transfer protocol): data
+TCP 21: FTP - control
+TCP 22: SSH - (Secure Shell)
+TCP 23: Telnet (Non-secure compared to ssh)
+TCP 25: SMTP (Simple Mail Transfer Protocol): Email.
+TCP 80:HTTP (HyperText Transfer Protocol) - Web
+
+
+Bandwidth
+
+Defined as the capacity at which the medium can carry data. Generally in some form of bits/second (obviously in Megabits, gigabits or erven Terabits).
+
+Addressing Standards
+
+In order to understand networking, we need to understand the binary numeral system
+
+Both binary and decimal (base 10) system are positional systems, meaning that each symbol changes it’s meaning depending on where it is situation (eg 11 shows 1 “1” and 1 “10” in decimal).  
+
+
+Addressing in the data link is done using “Media access Control” (MAC). A MAC address is a global address that comes with the network interface card (NIC). This is hard-coded into the NIC.
+
+A MAC address is 48 bits, expressed in 12 hex numbers.first six are “OUI” (organisationally unique identifiers), and second siz are NIC-specific. The actual MAC address cannot be changed on the NIC, but you can set this up via the network. 
+
+To check in Windows: ipconfig /all
+
+Can use this to find out vendor via various websites.
+
+On linux and mac it becomes ifconfig -all
+
+
+Network Layer Addressing:
+
+IP (Internet Protocol) Address: Used to identify the host of any network. Several versions exist currently, IPv4 and IPv6. IPv4 still dominant, although migration towards IPv6 is ongoing.
+
+IPv4:
+Series of ones and zeroes. Composed of four octets (8 bits). Total of 32 bits. 
+
+E.g 172.16.254.1 becomes 10101100.00010000.11111110.00000001
+
+
+
+
+Can identify computer on network by following. All addresses starting with network ID octet (or octets) are from the same network. Can identify type of address by opening bits (see above picture).
+
+So first number 0-127 is Class A, 128.0 to 191.255 is class B
+
+This is useful as it lets us know if hosts are on the same network or not.
+
+Find network ID by finding Ip class and then using correct number of octets for lookup.
+
+Subnet Mask
+
+This is a way of series of ones followed by series of zeroes. This allows the extension of the network address at the expense of the number of hosts. The format will be a series of 1s to designate the network portion. Using a logical AND (think if statement-style) the net address will be obtained when
+
+
+
+The idea of the subnet mask is to liberate the IP address from the enforced octets.was a fix to the fact that network portion of address was static in old ip addresses. Allows dynamic network address size.
+
+Recap again:
+
+Series of ones, followed by series of zeroes. Defines which sections of the binary are network and which are host address. 1s represent network Id, zeroes represent host ID. ELIMINATES CLASSES
+
+
 
 
 #### The Host
@@ -208,7 +488,7 @@ These messages are used to set up or alter the configuration of a hostVarious me
 
 - DHCPDECLINE is sent if an address is found to already be in use
 - DHCPRELEASE - client telling the server that they no longer need the elase and relinquishing the IP address
- - DHCPDISCOVER is a broadcast to locate available server 
+- DHCPDISCOVER is a broadcast to locate available server 
 
 DHCP also has other options to offer, e.g. Subnet Mask, the name server, Domain name, and so on. This is a convenient way of settign up a series of hosts which have the same networking details.
 
@@ -277,11 +557,11 @@ SSL filter the access to the network or network resources. When we want to prote
 A firewall is a system or group of systems, that enforce these access lists.
 
 All firewalls share some common properties:
-should be resistant to network attacks
-Can filter traffic
-Can allow or deny access based on the rules they have
-They enforce their access list
-Can be either hardware or software
+- Should be resistant to network attacks
+- Can filter traffic
+- Can allow or deny access based on the rules they have
+- They enforce their access list
+- Can be either hardware or software
 
 
 If software,can be installed on the host, server, etc.
@@ -291,15 +571,13 @@ If it is hardware, then it is a computer enforcing an access list/policy.
 
 Firewalls can be used both to protect the users from accessing unsafe content, and to prevent unauthorised access from outside of the network.
 
-Firewall Policies
+Firewall Policies: Either allow something to pass, or not. Decision depends on variety of factors, e.g. destination or origin IP, port connected to (for example a web server might allow traffic but only via ports 80 and 443 for HTTP and HTTPs traffic)
 
-
-Either allow something to pass, or not.
-Packet Filtering Firewall
+### Packet Filtering Firewall
 
 A firewall that controls the network access by analysing outgoing and incoming packets, based on information in the network and transport layers. Will check IP address, TCP or UDP and ports. Based on this information, will either allow or deny the traffic.
 
- ** Intercept packet -> Check network and transport layer info -> if in allow policy, let through. **
+ Intercept packet -> Check network and transport layer info -> if in allow policy, let through.
 
 
 ## Application Gateway Firewall
